@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales-ej4</title>
+</head>
+<body>
+    <script>
+        let num1, num2, dat1, dat2;
+        dat1= window.prompt("Primer numero?", "0");
+        num1= parseInt(dat1);
+
+        dat2= window.prompt("Segundo numero?", "0");
+        num2= parseInt(dat2);
+
+        if (num1 > num2){
+            document.write(`El mayor es el primero: `, num1);
+        } else if (num2>num1){
+            document.write(`El mayor es el segundo: `, num2);
+        } else{
+            document.write(`Los números son iguales`);
+        }
+    </script>
+</body>
+</html>
