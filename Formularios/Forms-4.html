@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-4</title>
+    <script>
+        function elevar(){
+            const a= parseFloat(document.getElementById("numero").value);
+            let cuadrado =(a**2);
+            let cubo= (a**3);
+            document.getElementById("resultado").innerHTML= ` El cuadrado de ${a} es ${cuadrado} y su cubo es ${cubo}`
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculo del cuadrado y el cubo de un numero</h1>
+
+    <form name="formulario" onsubmit="event.preventDefault(); elevar();">
+        <label for="numero">introduce un numero</label>
+        <input type="number" id="numero" required> 
+        <button type="submit">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+</body>
+</html>

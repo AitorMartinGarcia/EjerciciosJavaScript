@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-6</title>
+    <script>
+        function calcula(){
+            let numero= parseFloat(datos.entrada.value);
+            let dato= document.getElementById("lista");
+            let valor= dato.options[dato.selectedIndex].value;
+            let resultado= numero * valor;
+            document.getElementById("resultado").innerHTML= resultado;
+        }
+    </script>
+</head>
+<body>
+    <form name="datos">
+        Introduce un numero: <input type="text" name="entrada">
+        <select id="lista">
+            <option value="1" selected>uno</option>
+            <option value="2" selected>dos</option>
+            <option value="3" selected>tres</option>
+            <option value="4" selected>cuatro</option>
+        </select>
+        <button type="button" onclick="calcula()">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>
