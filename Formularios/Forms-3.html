@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms 3</title>
+    <script>
+        function calcula (){
+            document.datos.respuesta.value= eval(document.datos.entrada.value)
+        }
+    </script>
 </head>
 <body>
-    
+    <form name="datos" action="Ejercicio.hmtl">
+        Escribe una fórmula matemática, por ejemplo: (2+3)*10
+        <input type="text" size="20" name="entrada"/>
+        <input type="button" name="B1" value="Ejecuta" onclick="calcula()"/>
+        <input type="text" size="20" name="respuesta"/>
+        <input type="reset" name="B2" value="reset">
+    </form>
 </body>
 </html>

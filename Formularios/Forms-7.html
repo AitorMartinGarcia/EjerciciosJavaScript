@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms 7</title>
+    <script>
+        function convertir() {
+            let c = document.getElementById("celsius").value;
+            let f = c * 9/5 + 32;
+            document.getElementById("resultado").textContent =
+                c + " °C = " + f.toFixed(2) + " °F";
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Conversor de °C a °F</h2>
+
+<form onsubmit="return convertir()">
+    <input type="number" id="celsius" placeholder="Grados Celsius">
+    <button type="submit">Convertir</button>
+</form>
+
+<p id="resultado"></p>
+
+</body>
+</html>
